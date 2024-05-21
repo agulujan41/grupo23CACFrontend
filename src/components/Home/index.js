@@ -9,7 +9,11 @@ const HomeContainer = styled.div`
 const Img = styled.img`
     width:100%;
     object-fit: cover;
+    @media screen and (max-width: 768px) {
+      height:100%;
+    }
 `
+
 const Home = () => {
   return (
     <HomeContainer>
