@@ -4,6 +4,7 @@ import { lightMode } from './themes/themes';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Info from './components/Info';
 const Body = styled.div`
   background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
@@ -17,6 +18,7 @@ function App() {
           <Navbar/>
           <Body>
             <Home />
+            <Info/>
           </Body>
 
       </ThemeProvider>

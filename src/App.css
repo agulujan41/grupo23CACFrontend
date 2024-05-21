@@ -5,4 +5,15 @@
   font-weight: 500;
   font-style: normal; 
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes zoom_in{
+  from{
+    opacity: 0;
+    left:0;
+  }
+  to{
+    opacity: 1;
+  }
 }

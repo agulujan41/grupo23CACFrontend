@@ -28,7 +28,7 @@ const Navbar = () => {
             }}
           >
             <Img src="logo.png"/>
-            <Span>Logo</Span>
+            <Span>Grupo23AIR</Span>
           </a>
         </NavLogo>
         <MobileIcon>

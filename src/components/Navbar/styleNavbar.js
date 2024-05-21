@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Nav = styled.div`
     background-color: ${({theme}) => theme.backgroundColor};
-    height: 10vh;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,6 +44,7 @@ export const Span = styled.div`
     padding: 0 4px;
     font-weight: bold;
     font-size: 18px;
+    color: ${({theme})=>theme.primaryColor}
 `;
 
 export const Img = styled.img`
@@ -100,13 +101,14 @@ export const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
     display: flex;
-    height:10vh;
+    height:100px;
     align-items:center;
     justify-content:right;
     backgorund-color:yellow;
     font-size: 1.5rem;
     cursor: pointer;
     color: ${({ theme }) => theme.primaryColor};
+    -webkit-tap-highlight-color: transparent;
   }
 `
 

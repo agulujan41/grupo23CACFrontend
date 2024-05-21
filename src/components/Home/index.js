@@ -25,12 +25,14 @@ const SpanTitle = styled.span `
     left:50%;
     transform: translateX(-50%);
     top:10%;
+    font-weight:600;
     z-index:20;
     font-size: 2.5em;
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
     -ms-transition: all 2s ease;
     transition: all 2s ease;
+    animation:2s linear 1s zoom_in;;
     color:${({theme})=> theme.backgroundColor} !important;
  
     @media only screen and (min-width: 400px) and (max-device-width: 767px) {
@@ -41,6 +43,7 @@ const SpanTitle = styled.span `
       font-size: 1.3em;
       top:3%;
       width:40%;
+      
     }
 `
 
