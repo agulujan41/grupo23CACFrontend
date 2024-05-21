@@ -8,12 +8,20 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-@keyframes zoom_in{
+@keyframes appear_left_to_right{
   from{
     opacity: 0;
     left:0;
   }
   to{
     opacity: 1;
+  }
+}
+@keyframes appear_zoom{
+  from{
+    scale: 0.8;
+  }
+  to{
+    scale: 1;
   }
 }

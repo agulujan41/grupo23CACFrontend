@@ -205,3 +205,36 @@ export const MobileNavLogo = styled(LinkR)`
     padding: 0 0px;
   }
 `;
+export const NavBarRightComponents = styled.div`
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    gap:50px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+`;
+export const SelectLanguage = styled.select`
+  background-color: ${({theme})=>theme.backgroundColor};
+  border:none;
+  
+`;
+export const ItemLanguage = styled.option`
+    font-size:0.8em;
+    background-color: ${({theme})=>theme.backgroundColor};
+`;
+export const NavbarRightButton = styled.a`
+  font-size: 1em;
+  font-weight:500;
+  width:fit-content;
+  cursor:pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  white-space: nowrap;
+  padding: 8px 20px 8px 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-decoration:none;
+  
+`;

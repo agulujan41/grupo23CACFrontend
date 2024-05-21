@@ -32,7 +32,7 @@ const SpanTitle = styled.span `
     -moz-transition: all 2s ease;
     -ms-transition: all 2s ease;
     transition: all 2s ease;
-    animation:2s linear 1s zoom_in;;
+    animation: linear 1s appear_left_to_right;;
     color:${({theme})=> theme.backgroundColor} !important;
  
     @media only screen and (min-width: 400px) and (max-device-width: 767px) {
