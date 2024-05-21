@@ -1,7 +1,7 @@
 export const lightMode = {
-    backgroundColor : "EEEBEB",
+    backgroundColor : "white",
     primaryColor: "#303030",
-    secondaryColor: "#F5F5F5",
+    secondaryColor: "#EEEBEB",
     buttonPrimaryColor:"#FF2837",
     buttonSecondaryColor : "##FFDDDF",
 
