@@ -48,8 +48,8 @@ export const Span = styled.div`
 `;
 
 export const Img = styled.img`
-    height:40px;
-    width : 40px;
+    height:50px;
+    width : 50px;
     
 `;
 export const NavItems = styled.ul`
@@ -217,11 +217,12 @@ export const NavBarRightComponents = styled.div`
 export const SelectLanguage = styled.select`
   background-color: ${({theme})=>theme.backgroundColor};
   border:none;
-  
+  font-size:1em;
 `;
 export const ItemLanguage = styled.option`
-    font-size:0.8em;
+    font-size:1em;
     background-color: ${({theme})=>theme.backgroundColor};
+    color: ${({theme})=>theme.primaryColor};
 `;
 export const NavbarRightButton = styled.a`
   font-size: 1em;

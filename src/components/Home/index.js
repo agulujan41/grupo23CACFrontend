@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import HomeImg from '../../images/home.jpg'
+import { languages } from '../../data/constants'
+import { useGlobalState } from '../../App'
+
+
 const HomeContainer = styled.div`
     height:90vh;
     width:100%;
@@ -48,10 +52,11 @@ const SpanTitle = styled.span `
 `
 
 const Home = () => {
+  const defaultLanguageItem = useGlobalState("defaultLanguageItem")[0];
   return (
     <HomeContainer>
         <Img src={HomeImg} />
-        <SpanTitle>Live unforgettable experiences</SpanTitle>
+        <SpanTitle>{languages[defaultLanguageItem]?.contents.title_home}</SpanTitle>
     </HomeContainer>
   )
 }

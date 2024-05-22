@@ -16,11 +16,14 @@ import {
 import { FaBars } from "react-icons/fa";
 import { useTheme } from "styled-components";
 import { languages } from "../../data/constants";
-
+import {useGlobalState} from '../../App'
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme();
+
+const [isOpen, setIsOpen] = React.useState(false);
+const theme = useTheme();
+const [defaultLanguageItem,setDefaultLanguageItem] = useGlobalState("defaultLanguageItem");
   return (
+    
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">
@@ -33,7 +36,7 @@ const Navbar = () => {
             }}
           >
             <Img src="logo.png"/>
-            <Span>G23CAC-AIR</Span>
+            <Span>Aerofly</Span>
           </a>
         </NavLogo>
         
@@ -45,22 +48,26 @@ const Navbar = () => {
           />
         </MobileIcon>
         <NavBarRightComponents>
-            <SelectLanguage>
+            <SelectLanguage onChange={(e)=>setDefaultLanguageItem(parseInt(e.target.value))}>
               {languages.map((object,i) =>(
-                  <ItemLanguage id={i}>{object?.data}</ItemLanguage>
+        
+                  <ItemLanguage value={i} style={{
+                    backgroundImage: require(`../../images/languages/${object.url_pic}`)
+                  }}>{object?.data}</ItemLanguage>
+                  
               ))}
             </SelectLanguage>
             <NavbarRightButton href="#" style={{
                 backgroundColor: theme.buttonSecondaryColor,
                 color: theme.buttonPrimaryColor
             }}>
-                Login in
+                {languages[defaultLanguageItem]?.contents?.buttonLogin}
             </NavbarRightButton>
             <NavbarRightButton href="#" style={{
                 backgroundColor: theme.buttonPrimaryColor,
                 color: theme.backgroundColor
             }}>
-                Sign in
+                {languages[defaultLanguageItem]?.contents?.buttonSignIn}
             </NavbarRightButton>
         </NavBarRightComponents>
     
