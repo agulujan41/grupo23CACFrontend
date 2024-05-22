@@ -43,7 +43,7 @@ export const NavLogo = styled(LinkR)`
 export const Span = styled.div`
     padding: 0 4px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     color: ${({theme})=>theme.primaryColor}
 `;
 
@@ -118,14 +118,12 @@ export const MobileMenu = styled.div`
     justify-content: center;
     gap: 16px;
     position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    top: 90px;
+    right: 0px;
+    width:100%;
+    background: ${({ theme }) => theme.backgroundColor};
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
-    border-radius: 0 0 20px 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
@@ -165,6 +163,7 @@ export const MobileMenuButton = styled.a`
   align-items: center;
   height: 70%;
   border-radius: 20px;
+  
   color: ${({ theme }) => theme.primaryColor};
   cursor: pointer;
   padding: 0 20px;
@@ -180,10 +179,12 @@ export const MobileMenuButton = styled.a`
 `;
 
 export  const MobileLink = styled.a`
-  color: ${({ theme }) => theme.primaryColorColor};
+  color: ${({ theme }) => theme.primaryColor};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  margin: 10px 10px 10px 10px;
+
   text-decoration: none;
   :hover {
     color: ${({ theme }) => theme.primaryColor};
@@ -218,6 +219,16 @@ export const SelectLanguage = styled.select`
   background-color: ${({theme})=>theme.backgroundColor};
   border:none;
   font-size:1em;
+  
+`;
+
+export const SelectLanguageMobile = styled.select`
+  background-color: ${({theme})=>theme.backgroundColor};
+  border:none;
+  font-size:1em;
+  margin: 10px 10px 10px 10px;
+  transition: all 0.2s ease-in-out;
+
 `;
 export const ItemLanguage = styled.option`
     font-size:1em;

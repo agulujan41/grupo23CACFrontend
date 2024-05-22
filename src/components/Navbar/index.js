@@ -9,8 +9,10 @@ import {
   MobileMenu,
   NavBarRightComponents,
   SelectLanguage,
+  SelectLanguageMobile,
   NavbarRightButton,
-  ItemLanguage
+  ItemLanguage,
+  MobileLink
 
 } from "./styleNavbar";
 import { FaBars } from "react-icons/fa";
@@ -73,7 +75,25 @@ const [defaultLanguageItem,setDefaultLanguageItem] = useGlobalState("defaultLang
     
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
+              
+                <MobileLink href="#"  onClick={() => {
+                setIsOpen(!isOpen);
+              }}>{languages[defaultLanguageItem]?.contents?.buttonLogin}
+              </MobileLink>
+
+              <MobileLink href="#"  onClick={() => {
+                setIsOpen(!isOpen);
+              }}>{languages[defaultLanguageItem]?.contents?.buttonSignIn}
+              </MobileLink>
+              <SelectLanguageMobile onChange={(e)=>(setDefaultLanguageItem(parseInt(e.target.value), setIsOpen(!isOpen)))}>
+              {languages.map((object,i) =>(
         
+                  <ItemLanguage value={i} style={{
+                    backgroundImage: require(`../../images/languages/${object.url_pic}`)
+                  }}>{object?.data}</ItemLanguage>
+                  
+              ))}
+            </SelectLanguageMobile>
             
           </MobileMenu>
         )}
