@@ -7,6 +7,16 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+body::-webkit-scrollbar {
+  width: 0.7em;
+  
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ff283644;
+  border-radius: 10px;
+  outline: 1px solid slatgegrey;
+  cursor: pointer;
+}
 
 @keyframes appear_left_to_right{
   from{
