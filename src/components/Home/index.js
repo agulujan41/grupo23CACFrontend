@@ -26,6 +26,7 @@ const Home = () => {
     @media screen and (max-width: 768px) {
       height: 100%;
     }
+   
   `;
   const SpanTitle = styled.span`
     width: 500px;
@@ -55,7 +56,11 @@ const Home = () => {
       font-size:1.85em;
       width: 270px;
     }
-    
+    @media screen and (max-height: 450px) {
+      top: 1.5%;
+      font-size:1.1em;
+      width: 200px;
+    }
     
     
     color: ${({ theme }) => theme.backgroundColor} !important;

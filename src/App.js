@@ -26,7 +26,7 @@ function App() {
             <Home />
             <Info />
           </Body>
-
+          
       </ThemeProvider>
     </>
   );
