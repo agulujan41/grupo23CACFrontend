@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HomeImg from "../../../images/home.jpg";
-import { languages } from "../../../data/constants";
+import { languages } from "./constants";
 import { useGlobalState } from "../../../App";
 import logoBusqueda from "../../../images/Icons/logo.png"
 import { useState } from "react";
@@ -165,7 +165,7 @@ const Home = () => {
             name=""
             id=""
             className="SearchMain"
-            placeholder="Search the next place you gonna travel"
+            placeholder={languages[defaultLanguageItem]?.contents.search_place_holder}
           ></input>
           )}
           {!searchTrigger && (
@@ -173,23 +173,23 @@ const Home = () => {
           <TopSearchViewContainer>
               <QuestionsContainer>
                 <Question>
-                    <QuestionTitle>Place</QuestionTitle>
-                    <QuestionContent>Search your destination</QuestionContent>
+                    <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[0]}</QuestionTitle>
+                    <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[0]}</QuestionContent>
                 </Question>
                 < LineaV></LineaV>
                 <Question>
-                    <QuestionTitle>Place</QuestionTitle>
-                    <QuestionContent>Search your destination</QuestionContent>
+                    <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[1]}</QuestionTitle>
+                    <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[1]}</QuestionContent>
                 </Question>
                 < LineaV></LineaV>
                 <Question>
-                    <QuestionTitle>Place</QuestionTitle>
-                    <QuestionContent>Search your destination</QuestionContent>
+                    <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[2]}</QuestionTitle>
+                    <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[2]}</QuestionContent>
                 </Question>
                 < LineaV></LineaV>
                 <Question>
-                    <QuestionTitle>Place</QuestionTitle>
-                    <QuestionContent>Search your destination</QuestionContent>
+                    <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[3]}</QuestionTitle>
+                    <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[3]}</QuestionContent>
                 </Question>
               </QuestionsContainer>
               <ButtonIconSearch onClick={()=>setSearchTrigger(true)}>

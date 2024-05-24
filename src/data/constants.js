@@ -6,8 +6,7 @@ export const languages= [
         contents:{
             buttonLogin: "Login in",
             buttonSignIn: "Sign in",
-            title_home: "Live unforgettable experiences",
-            search_button: "Search"
+            
         }
     },
     {
@@ -17,8 +16,7 @@ export const languages= [
         contents:{
             buttonLogin: "Ingresar",
             buttonSignIn: "Registrarme",
-            title_home: "Viví una experiencia inolvidable",
-            search_button: "Buscar"
+           
         }
     },
     {
@@ -28,8 +26,7 @@ export const languages= [
         contents:{
             buttonLogin: "Se connecter",
             buttonSignIn: "S'inscrire",
-            title_home: "J'ai vécu une expérience inoubliable",
-            search_button: "Chercher"
+           
         }
     },
     {
@@ -39,8 +36,7 @@ export const languages= [
         contents:{
             buttonLogin: "войти в систему",
             buttonSignIn: "зарегистрироваться",
-            title_home: "Я пережил незабываемый опыт",
-            search_button: "Искать"
+           
         }
     }
 ];
