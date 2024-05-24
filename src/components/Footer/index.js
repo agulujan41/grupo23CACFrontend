@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { useTheme } from "styled-components";
 import "./style.css";
-const Footer = () => {
-  const theme = useTheme();
+const Footer = ({ showFooterContainer }) => {
   const FooterContainer = styled.div`
-    padding-top:40px;
-    padding-bottom:40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     width: 100%;
     background-color: ${({ theme }) => theme.buttonPrimaryColor};
     display: flex;
@@ -17,8 +15,8 @@ const Footer = () => {
   `;
 
   const FooterContainerCopyRight = styled.div`
-    padding-top:120px;
-    
+    padding-top: 120px;
+
     width: 100%;
     background-color: ${({ theme }) => theme.backgroundColor};
     display: flex;
@@ -31,9 +29,11 @@ const Footer = () => {
     font-size: 1.6em;
     color: ${({ theme }) => theme.backgroundColor};
     text-align: center;
+    @media only screen and (max-width:968px){
+      font-size: 1em;
+    }
   `;
   const ContainerFinalCR = styled.div`
-    
     width: 100%;
     position: absolute;
     bottom: 15px;
@@ -41,7 +41,7 @@ const Footer = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:7px;
+    gap: 7px;
   `;
   const LineaH = styled.div`
     width: 90%;
@@ -56,16 +56,18 @@ const Footer = () => {
   `;
   return (
     <>
-      <FooterContainer>
-        <H1>Suscribe our Newsletter</H1>
-        <input
-          type="search"
-          name=""
-          id=""
-          className="searchFooter"
-          placeholder="Enter your email"
-        ></input>
-      </FooterContainer>
+      {showFooterContainer && (
+        <FooterContainer>
+          <H1>Suscribe our Newsletter</H1>
+          <input
+            type="search"
+            name=""
+            id=""
+            className="searchFooter"
+            placeholder="Enter your email"
+          ></input>
+        </FooterContainer>
+      )}
 
       <FooterContainerCopyRight>
         <ContainerFinalCR>

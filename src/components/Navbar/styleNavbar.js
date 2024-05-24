@@ -135,7 +135,7 @@ export const MobileMenuItems = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 42px;
   list-style: none;
   width: 100%;
   height: 100%;
@@ -242,7 +242,7 @@ export const NavbarRightButton = styled.a`
   cursor:pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   white-space: nowrap;
-  padding: 8px 20px 8px 20px;
+  padding: 15px 20px 15px 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;

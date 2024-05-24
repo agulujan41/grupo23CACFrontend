@@ -22,7 +22,7 @@ const Main = () => {
         <Info />
         <Posts />
       </Body>
-      <Footer/>
+      <Footer showFooterContainer={true}/>
     </ThemeProvider>
   );
 };

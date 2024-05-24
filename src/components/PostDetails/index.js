@@ -41,7 +41,7 @@ const PostDetails = () => {
         </div>
         {/*BORRAR HASTA AQUI*/}
       </Body>
-      <Footer />
+      <Footer  showFooterContainer={true} />
     </ThemeProvider>
   );
 };

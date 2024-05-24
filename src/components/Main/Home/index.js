@@ -3,13 +3,11 @@ import styled from "styled-components";
 import HomeImg from "../../../images/home.jpg";
 import { languages } from "../../../data/constants";
 import { useGlobalState } from "../../../App";
-import { useTheme } from "styled-components";
 import logoBusqueda from "../../../images/Icons/logo.png"
 import { useState } from "react";
 import "./style.css";
 const Home = () => {
   const defaultLanguageItem = useGlobalState("defaultLanguageItem")[0];
-  const theme = useTheme();
   const [searchTrigger,setSearchTrigger] = useState(false);
   const HomeContainer = styled.div`
     height: 90vh;
@@ -98,7 +96,7 @@ const Home = () => {
     background-color: ${({ theme }) => theme.backgroundColor};
     border-radius: 30px;
     width:100%;
-    padding:10px 0px 10px 40px;
+    padding:10px 0px 10px 0px;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -115,7 +113,7 @@ const Home = () => {
     display:flex;
     flex-dirextion:row;
     justify-content:space-around;
-   
+    padding:10px;
     gap:10px;
   `;
   const Question = styled.div`
@@ -151,6 +149,7 @@ const Home = () => {
     cursor:pointer;
     margin:auto;
     background-color:${({theme})=>theme.buttonSecondaryColor};
+    margin-right:10px;
   `;
   return (
     <HomeContainer>

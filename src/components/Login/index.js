@@ -40,7 +40,7 @@ const Login = () => {
         </div>
         {/*BORRAR HASTA AQUI*/}
       </Body>
-      <Footer/>
+      <Footer showFooterContainer={false}/>
     </ThemeProvider>
   );
 };
