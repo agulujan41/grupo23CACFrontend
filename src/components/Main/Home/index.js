@@ -4,10 +4,13 @@ import HomeImg from "../../../images/home.jpg";
 import { languages } from "../../../data/constants";
 import { useGlobalState } from "../../../App";
 import { useTheme } from "styled-components";
+import logoBusqueda from "../../../images/Icons/logo.png"
+import { useState } from "react";
 import "./style.css";
 const Home = () => {
   const defaultLanguageItem = useGlobalState("defaultLanguageItem")[0];
   const theme = useTheme();
+  const [searchTrigger,setSearchTrigger] = useState(false);
   const HomeContainer = styled.div`
     height: 90vh;
     width: 100%;
@@ -95,7 +98,7 @@ const Home = () => {
     background-color: ${({ theme }) => theme.backgroundColor};
     border-radius: 30px;
     width:100%;
-    padding:10px 40px 10px 40px;
+    padding:10px 0px 10px 40px;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -143,6 +146,12 @@ const Home = () => {
     background-color: ${({theme})=>theme.primaryColor};
     
   `;
+  const ButtonIconSearch = styled.a`
+    border-radius:50%;
+    cursor:pointer;
+    margin:auto;
+    background-color:${({theme})=>theme.buttonSecondaryColor};
+  `;
   return (
     <HomeContainer>
       <Img src={HomeImg} />
@@ -151,6 +160,7 @@ const Home = () => {
       </SpanTitle>
       <SearchContainer>
         <ContainerSearchComponent>
+          {searchTrigger && (
           <input
             type="search"
             name=""
@@ -158,6 +168,9 @@ const Home = () => {
             className="SearchMain"
             placeholder="Search the next place you gonna travel"
           ></input>
+          )}
+          {!searchTrigger && (
+          
           <TopSearchViewContainer>
               <QuestionsContainer>
                 <Question>
@@ -180,11 +193,17 @@ const Home = () => {
                     <QuestionContent>Search your destination</QuestionContent>
                 </Question>
               </QuestionsContainer>
+              <ButtonIconSearch onClick={()=>setSearchTrigger(true)}>
+                  <img src={logoBusqueda} alt="" style={{height:"50px",width:"50px"}}/>
+              </ButtonIconSearch>
           </TopSearchViewContainer>
+          )}
         </ContainerSearchComponent>
         <ButtonSearch>
           {languages[defaultLanguageItem]?.contents.search_button}
         </ButtonSearch>
+        
+       
       </SearchContainer>
     </HomeContainer>
   );

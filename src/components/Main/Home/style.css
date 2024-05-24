@@ -1,15 +1,22 @@
 .SearchMain{
-    width:100%;
+    min-width: 200;
     border:none;
     height:100%;
     border-radius: 50%;
-    padding:10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: none;
+    padding: 4px 40px 4px 40px;
+    font-size: 1em;
+   
 }
 .SearchMain:focus{
     outline: none;
-   
-    font-size: 1em;
+    height:100%;
+    width: 100%;
+}
+@media screen and (max-width:1000px){
+    .SearchMain{
+       
+        padding: 20px 4px 20px 4px;
+      
+       
+    }
 }

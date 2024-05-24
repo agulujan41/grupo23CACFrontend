@@ -75,7 +75,7 @@ const [defaultLanguageItem,setDefaultLanguageItem] = useGlobalState("defaultLang
         </NavBarRightComponents>
     
         {isOpen && (
-          <MobileMenu isOpen={isOpen}>
+          <MobileMenu isOpen={isOpen} >
               
                 <MobileLink href="/login/"  onClick={() => {
                 setIsOpen(!isOpen);
