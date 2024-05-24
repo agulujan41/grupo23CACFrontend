@@ -20,6 +20,9 @@ const Home = () => {
     top: 0px;
     width: 100%;
     object-fit: cover;
+    @media screen and (max-width: 1320px) {
+      height: 100%;
+    }
     @media screen and (max-width: 1100px) {
       height: 100%;
     }
@@ -78,6 +81,18 @@ const Home = () => {
     justify-content: center;
     align-items: center;
     gap:15px;
+    
+    @media screen and (max-width: 1100px) {
+     
+      width:80%;
+    }
+    @media screen and (max-width: 768px) {
+      
+      width:85%;
+    }
+    @media screen and (max-height: 450px) {
+      width:75%;
+    }
   `;
   
   const ButtonSearch = styled.a`
@@ -93,6 +108,14 @@ const Home = () => {
     background-color:${({theme})=>theme.backgroundColor};
     width:100%;
     border-radius:30px;
+
+    @media screen and (max-width: 768px) {
+      
+      display:none;
+    }
+    @media screen and (max-height: 450px) {
+      height:50;
+    }
   `;
   return (
     <HomeContainer>

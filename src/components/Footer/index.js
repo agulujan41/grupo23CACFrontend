@@ -17,8 +17,8 @@ const Footer = () => {
   `;
 
   const FooterContainerCopyRight = styled.div`
-    padding-top:40px;
-    margin: 0% 10% 0% 10%;
+    padding-top:120px;
+    
     width: 100%;
     background-color: ${({ theme }) => theme.backgroundColor};
     display: flex;
@@ -33,9 +33,10 @@ const Footer = () => {
     text-align: center;
   `;
   const ContainerFinalCR = styled.div`
+    
     width: 100%;
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,6 +52,7 @@ const Footer = () => {
     font-size: 0.6em;
     color: ${({ theme }) => theme.primaryColor};
     text-align: center;
+    margin: 0% 10% 0% 10%;
   `;
   return (
     <>
