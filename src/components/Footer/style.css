@@ -5,6 +5,7 @@
     border: none;
     height: 40px;
     padding: 10px;
+    z-index: 120;
 }
 .searchFooter:focus{
     outline: none;
