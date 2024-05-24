@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import HomeImg from "../../images/home.jpg";
-import { languages } from "../../data/constants";
-import { useGlobalState } from "../../App";
+import HomeImg from "../../../images/home.jpg";
+import { languages } from "../../../data/constants";
+import { useGlobalState } from "../../../App";
 import { useTheme } from "styled-components";
 
 const Home = () => {

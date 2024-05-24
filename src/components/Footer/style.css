@@ -1,0 +1,21 @@
+.searchFooter{
+    background-color: white;
+    border-radius: 20px;
+    width: 45%;
+    border: none;
+    height: 40px;
+    padding: 10px;
+}
+.searchFooter:focus{
+    outline: none;
+}
+
+@media screen and (max-width:860px) {
+    .searchFooter{
+       
+        width: 85%;
+     
+        height: 30px;
+      
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ImgPublicidad from "../../images/info.png"
+import ImgPublicidad from "../../../images/info.png"
 const ContainerInfo = styled.div`
   width:100%;
   height:auto;

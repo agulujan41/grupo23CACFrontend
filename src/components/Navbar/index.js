@@ -19,6 +19,7 @@ import { FaBars } from "react-icons/fa";
 import { useTheme } from "styled-components";
 import { languages } from "../../data/constants";
 import {useGlobalState} from '../../App'
+import logoImage from "../../images/logo.png"
 const Navbar = () => {
 
 const [isOpen, setIsOpen] = React.useState(false);
@@ -37,7 +38,7 @@ const [defaultLanguageItem,setDefaultLanguageItem] = useGlobalState("defaultLang
               cursor: "pointer",
             }}
           >
-            <Img src="logo.png"/>
+            <Img src={logoImage}/>
             <Span>Aerofly</Span>
           </a>
         </NavLogo>
@@ -59,13 +60,13 @@ const [defaultLanguageItem,setDefaultLanguageItem] = useGlobalState("defaultLang
                   
               ))}
             </SelectLanguage>
-            <NavbarRightButton href="#" style={{
+            <NavbarRightButton href='/login/' style={{
                 backgroundColor: theme.buttonSecondaryColor,
                 color: theme.buttonPrimaryColor
             }}>
                 {languages[defaultLanguageItem]?.contents?.buttonLogin}
             </NavbarRightButton>
-            <NavbarRightButton href="#" style={{
+            <NavbarRightButton href="/sign_in/" style={{
                 backgroundColor: theme.buttonPrimaryColor,
                 color: theme.backgroundColor
             }}>
@@ -76,12 +77,12 @@ const [defaultLanguageItem,setDefaultLanguageItem] = useGlobalState("defaultLang
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
               
-                <MobileLink href="#"  onClick={() => {
+                <MobileLink href="/login/"  onClick={() => {
                 setIsOpen(!isOpen);
               }}>{languages[defaultLanguageItem]?.contents?.buttonLogin}
               </MobileLink>
 
-              <MobileLink href="#"  onClick={() => {
+              <MobileLink href="/sign_in/"  onClick={() => {
                 setIsOpen(!isOpen);
               }}>{languages[defaultLanguageItem]?.contents?.buttonSignIn}
               </MobileLink>
