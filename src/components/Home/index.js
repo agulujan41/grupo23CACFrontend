@@ -36,7 +36,7 @@ const Home = () => {
     left: 50%;
     transform: translateX(-50%);
     top: 5%;
-    font-weight: 400;
+    font-weight: 550;
     z-index: 20;
     font-size: 2.5em;
     
