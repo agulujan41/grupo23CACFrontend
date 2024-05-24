@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Info from './components/Info';
+import Posts from './components/Posts';
+
 import { createGlobalState } from 'react-hooks-global-state';
 const {useGlobalState} = createGlobalState({
   defaultLanguageItem : 0  
@@ -25,6 +27,7 @@ function App() {
           <Body>
             <Home />
             <Info />
+            <Posts />
           </Body>
           
       </ThemeProvider>
