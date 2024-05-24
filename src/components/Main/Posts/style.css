@@ -1,15 +1,21 @@
+.post-div {
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
 .post-h2 {
     font-size: 2rem;
     font-weight: 600;
 }
 .posts {
     display: flex;
-    justify-content: center;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 .post {
     width: 20rem;
+    margin: 0 auto;
 }
 .img-posts {
     width: 20rem;
