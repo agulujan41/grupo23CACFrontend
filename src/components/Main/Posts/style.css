@@ -1,3 +1,51 @@
-h1 {
-    color: rebeccapurple;
+.post-h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.posts {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.post {
+    width: 20rem;
+}
+.img-posts {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.post-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: .2rem;
+}
+.post-para {
+    font-weight: 500;
+    font-size: 1rem;
+}
+.post-stars {
+    display: flex;
+}
+.post-price {
+    display: flex;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.post-button {
+    background-color: #FF2837;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    padding: .7rem;
 }
