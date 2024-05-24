@@ -5,7 +5,8 @@ import "./style.css";
 const Footer = () => {
   const theme = useTheme();
   const FooterContainer = styled.div`
-    height: 180px;
+    padding-top:40px;
+    padding-bottom:40px;
     width: 100%;
     background-color: ${({ theme }) => theme.buttonPrimaryColor};
     display: flex;
@@ -16,7 +17,8 @@ const Footer = () => {
   `;
 
   const FooterContainerCopyRight = styled.div`
-    height: 100px;
+    padding-top:40px;
+    margin: 0% 10% 0% 10%;
     width: 100%;
     background-color: ${({ theme }) => theme.backgroundColor};
     display: flex;
