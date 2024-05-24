@@ -77,6 +77,7 @@ const Home = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:15px;
   `;
   
   const ButtonSearch = styled.a`
@@ -87,7 +88,12 @@ const Home = () => {
     padding: 10px 23px 10px 23px;
     border-radius:23px;
   `;
-  
+  const ContainerSearchComponent = styled.div`
+    height:70px;
+    background-color:${({theme})=>theme.backgroundColor};
+    width:100%;
+    border-radius:30px;
+  `;
   return (
     <HomeContainer>
       <Img src={HomeImg} />
@@ -95,6 +101,9 @@ const Home = () => {
         {languages[defaultLanguageItem]?.contents.title_home}
       </SpanTitle>
       <SearchContainer>
+        <ContainerSearchComponent>
+
+        </ContainerSearchComponent>
         <ButtonSearch>
           {languages[defaultLanguageItem]?.contents.search_button}
         </ButtonSearch>
