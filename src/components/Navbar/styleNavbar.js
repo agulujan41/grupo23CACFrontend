@@ -215,26 +215,7 @@ export const NavBarRightComponents = styled.div`
       display: none;
     }
 `;
-export const SelectLanguage = styled.select`
-  background-color: ${({theme})=>theme.backgroundColor};
-  border:none;
-  font-size:1em;
-  
-`;
 
-export const SelectLanguageMobile = styled.select`
-  background-color: ${({theme})=>theme.backgroundColor};
-  border:none;
-  font-size:1em;
-  margin: 10px 10px 10px 10px;
-  transition: all 0.2s ease-in-out;
-
-`;
-export const ItemLanguage = styled.option`
-    font-size:1em;
-    background-color: ${({theme})=>theme.backgroundColor};
-    color: ${({theme})=>theme.primaryColor};
-`;
 export const NavbarRightButton = styled.a`
   font-size: 1em;
   font-weight:500;
@@ -249,4 +230,71 @@ export const NavbarRightButton = styled.a`
   border-bottom-right-radius: 20px;
   text-decoration:none;
   
+`;
+
+export const SelectLanguage = styled.div`
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    align-items:left;
+    justify-content:center;
+    padding:5px;
+    background-color:${({theme})=> theme.backgroundColor};
+
+`;
+export const SelectLanguageMobile = styled.div`
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    align-items:left;
+    justify-content:center;
+    margin:5px;
+    background-color:${({theme})=> theme.backgroundColor};
+
+`;
+export const CurrentLanguageItem = styled.div`
+  display:flex;
+  flex-direction:row;
+  gap:10px;
+  width:100%;
+  padding:2px;
+  &:hover{
+    border:1px solid gray;
+  }
+`;
+export const LanguageIcon = styled.img`
+    height:20px;
+    width:20px;
+`;
+export const LanguageComboBox = styled.div`
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    bottom:-137px;
+    left:50%;
+    width:100%;
+    transform: translateX(-50%);
+    align-items:center;
+    z-index:100; 
+    
+`;
+export const LanguageText = styled.span`
+   
+`;
+export const LanguageComboBoxIcon = styled.img`
+    height:20px;
+    width:20px;
+`;
+export const ItemLanguage = styled.div`
+    display:flex;
+    flex-direction:row;
+    padding:7px;
+    background-color:${({theme})=>theme.backgroundColor};
+    width:100%;
+    gap:10px;
+    &:hover{
+      border:1px solid gray;
+      cursor:pointer;
+      background-color:${({theme})=>theme.buttonSecondaryColor};
+    }
 `;
