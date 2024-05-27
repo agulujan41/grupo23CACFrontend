@@ -183,7 +183,7 @@ export  const MobileLink = styled.a`
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin: 10px 10px 10px 10px;
+  margin: 15px;
 
   text-decoration: none;
   :hover {
@@ -248,7 +248,7 @@ export const SelectLanguageMobile = styled.div`
     position:relative;
     align-items:left;
     justify-content:center;
-    margin:5px;
+    margin:15px;
     background-color:${({theme})=> theme.backgroundColor};
 
 `;
