@@ -3,9 +3,8 @@ import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import { createGlobalState } from 'react-hooks-global-state';
 import Main from './components/Main';
-import Login from './components/Login';
-import SignIn from './components/SignIn';
 import PostDetails from './components/PostDetails';
+import Authentication from './components/Authentication';
 const {useGlobalState} = createGlobalState({
   defaultLanguageItem : 0  
 });
@@ -19,8 +18,8 @@ function App() {
     <>
       <Routes>
           <Route path='/' element={ <Main/>}/>
-          <Route path='/login/' element={ <Login/>}/>
-          <Route path='/sign_in/' element={ <SignIn/>}/>
+          <Route path='/login/' element={ <Authentication type="login"/>}/>
+          <Route path='/sign_in/' element={ <Authentication type="sign_in"/>}/>
           <Route path='/post_details/' element={ <PostDetails/>}/>
       </Routes>
      

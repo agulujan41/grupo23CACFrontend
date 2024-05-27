@@ -1,20 +1,10 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
-import { lightMode } from "../../themes/themes";
-import styled from "styled-components";
-import Navbar from "../../components/Navbar";
 import PostDetailsSSFigma from "../../images/screenshootsFigma/login.png"
-import Footer from "../Footer";
+
 const Login = () => {
-  const Body = styled.div`
-    background-color: ${({ theme }) => theme.backgroundColor};
-    width: 100%;
-    overflow-x: hidden;
-  `;
+  
   return (
-    <ThemeProvider theme={lightMode}>
-      <Navbar />
-      <Body>
+      <>
         {/*BORRAR DESDE AQUI*/}
         <div
           style={{
@@ -39,9 +29,8 @@ const Login = () => {
           <a href="https://www.figma.com/design/c2EUwUzdSg5fOBgnmM6Oym/Untitled?node-id=0-1&t=I8KL7woD0vKKNzhe-0" target="__blank"><img  src={PostDetailsSSFigma} alt="Ver en figma"/></a>
         </div>
         {/*BORRAR HASTA AQUI*/}
-      </Body>
-      <Footer showFooterContainer={false}/>
-    </ThemeProvider>
+      </>
+    
   );
 };
 
