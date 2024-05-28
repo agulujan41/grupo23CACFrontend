@@ -6,6 +6,8 @@ import visibility_off from "../../images/Icons/visibility_off.png"
 import { useState } from "react";
 const SignIn = () => {
   const [visibilityPassword,setVisibilityPassword] = useState(false)
+  const [textPassword,setTextPassword] = useState("");
+  const [textCPassword,setTextCPassword] = useState("");
   const LoginContainer = styled.div`
     margin: auto;
     height: 80%;
@@ -120,7 +122,7 @@ const SignIn = () => {
   return (
     <LoginContainer>
       <FormLogin method="post" action="/sign_in/">
-        <Title>Sing in</Title>
+        <Title>Sign in</Title>
         <InputContainers>
           {/* Nombre */}
           <InputContainer>
@@ -140,7 +142,7 @@ const SignIn = () => {
            <InputContainer>
             <InputLabel>Password</InputLabel>
             <InputEntry>
-              <input type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········"></input>
+              <input type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········" value={textPassword} onChange={e=>{setTextPassword(e.target.value);e.target.focus();} } autoFocus={true} ></input>
               
               <BtnShowPassword src={visibilityPassword?visibility:visibility_off } onClick={()=>{setVisibilityPassword(!visibilityPassword);}}></BtnShowPassword>
             </InputEntry>
@@ -149,8 +151,8 @@ const SignIn = () => {
           <InputContainer>
             <InputLabel>Confirm password</InputLabel>
             <InputEntry>
-              <input type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········"></input>
-              <BtnShowPassword src={visibilityPassword?(visibility):(visibility_off)} onclick={()=>{setVisibilityPassword(!visibilityPassword);}}></BtnShowPassword>
+              <input type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········" value={textCPassword} onChange={e=>{setTextCPassword(e.target.value);e.target.focus();}} autoFocus={true} ></input>
+              <BtnShowPassword src={visibilityPassword?(visibility):(visibility_off)} onClick={()=>{setVisibilityPassword(!visibilityPassword);}}></BtnShowPassword>
             </InputEntry>
           </InputContainer>
         </InputContainers>
@@ -158,7 +160,7 @@ const SignIn = () => {
           <CheckTerms type="checkbox"/>
           <LinkTerms>Terms and Conditions</LinkTerms>
         </TermsContainer>
-        <BtnCreateAccount>Create Account</BtnCreateAccount>
+        <BtnCreateAccount type="submit">Create Account</BtnCreateAccount>
 
         <HaveAnAccountContainer>
           <HaveAnAccount>Have an account?</HaveAnAccount>

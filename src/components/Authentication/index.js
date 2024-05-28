@@ -25,6 +25,8 @@ const Authentication = ({ type }) => {
     width: 50%;
     height: 90vh;
     object-fit: cover;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     @media (max-width: 1000px) {
       display: none;
     }
