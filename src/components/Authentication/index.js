@@ -16,6 +16,10 @@ const Authentication = ({ type }) => {
   const AuthenticationContainer = styled.div`
     width: 100%;
     display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
   `;
   const AuthenticationImg = styled.img`
     width: 50%;

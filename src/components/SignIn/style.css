@@ -1,0 +1,10 @@
+.inputLogin{
+    border-radius: 20px;
+    border:none;
+    width:80%;
+    margin: 0px 0px 0px 10px;
+    font-size: 0.9em;
+}
+.inputLogin:focus{
+    outline: none;
+}

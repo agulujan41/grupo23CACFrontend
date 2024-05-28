@@ -4,11 +4,9 @@ import HomeImg from "../../../images/home.jpg";
 import { languages } from "./constants";
 import { useGlobalState } from "../../../App";
 import logoBusqueda from "../../../images/Icons/logo.png"
-import { useState } from "react";
 import "./style.css";
 const Home = () => {
   const defaultLanguageItem = useGlobalState("defaultLanguageItem")[0];
-  const [searchTrigger,setSearchTrigger] = useState(false);
   const HomeContainer = styled.div`
     height: 90vh;
     width: 100%;
@@ -159,16 +157,8 @@ const Home = () => {
       </SpanTitle>
       <SearchContainer>
         <ContainerSearchComponent>
-          {searchTrigger && (
-          <input
-            type="search"
-            name=""
-            id=""
-            className="SearchMain"
-            placeholder={languages[defaultLanguageItem]?.contents.search_place_holder}
-          ></input>
-          )}
-          {!searchTrigger && (
+         
+       
           
           <TopSearchViewContainer>
               <QuestionsContainer>
@@ -192,11 +182,11 @@ const Home = () => {
                     <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[3]}</QuestionContent>
                 </Question>
               </QuestionsContainer>
-              <ButtonIconSearch onClick={()=>setSearchTrigger(true)}>
+              <ButtonIconSearch >
                   <img src={logoBusqueda} alt="" style={{height:"50px",width:"50px"}}/>
               </ButtonIconSearch>
           </TopSearchViewContainer>
-          )}
+        
         </ContainerSearchComponent>
         <ButtonSearch>
           {languages[defaultLanguageItem]?.contents.search_button}
