@@ -9,12 +9,31 @@ export const postsList= [
                 category:"For you:",
                 posts:[
                     {
-                        post_title:"Miami Beach",
-                        post_para: "Miami beaches are renowned for their sun-kissed sands, azure waters.",
-                        img1:"miami_beach1.jpg",
-                        img2:"miami_beach2.jpg",
-                        img3:"miami_beach3.jpg",
-                        img4:"miami_beach4.jpg",
+                        post_price:35,
+                        post_title:"Tilcara",
+                        post_para: "Nestled in the heart of the Quebrada de Humahuaca, Tilcara stands as a captivating destination that blends history, culture, and nature in a stunningly beautiful setting. In this magical landscape, our lodging offers a unique experience for those seeking to immerse themselves in the authenticity of northwestern Argentina. With architecture that respects local traditions and modern amenities ensuring a comfortable stay, our guests can enjoy panoramic mountain views, tours of archaeological sites, and an immersion in the rich local culture. Whether exploring vibrant markets, savoring regional cuisine, or simply relaxing in a tranquil environment, our lodging in Tilcara is the perfect starting point for an unforgettable adventure.",
+                        img1:"tilcara1.jpg",
+                        img2:"tilcara2.jpg",
+                        img3:"tilcara3.jpg",
+                        img4:"tilcara4.jpg",
+                    },
+                    {
+                        post_price:42,
+                        post_title:"Purmamarca",
+                        post_para: "Nestled at the base of the stunning Cerro de los Siete Colores, Purmamarca is a charming village that epitomizes the natural beauty and cultural richness of the Quebrada de Humahuaca. Our lodging in Purmamarca offers a unique blend of traditional Andean architecture and modern comforts, providing an authentic yet luxurious experience for travelers. Guests can wake up to breathtaking views of multicolored mountains, explore the historic town with its vibrant markets and ancient adobe houses, and immerse themselves in the local culture and traditions. Whether you're hiking through dramatic landscapes, sampling exquisite regional cuisine, or simply soaking in the serene atmosphere, our lodging in Purmamarca is your gateway to an unforgettable journey.",
+                        img1:"purmamarca1.jpg",
+                        img2:"purmamarca2.jpg",
+                        img3:"purmamarca3.jpg",
+                        img4:"purmamarca4.jpg",
+                    },
+                    {
+                        post_price:42,
+                        post_title:"Cachi",
+                        post_para: "Perched amidst the rugged landscapes of the Calchaquí Valley, Cachi beckons travelers with its timeless charm and breathtaking vistas. Our lodging in Cachi offers a sanctuary of tranquility where guests can unwind and connect with the natural beauty of the surrounding Andean peaks. With rustic yet cozy accommodations that blend seamlessly into the picturesque setting, our establishment provides a perfect retreat after a day of exploring the region's hidden treasures. Whether you're wandering through the historic streets lined with colonial architecture, embarking on scenic hikes to nearby viewpoints, or savoring the flavors of local cuisine, our lodging in Cachi promises an unforgettable experience infused with warmth and hospitality.",
+                        img1:"cachi1.jpg",
+                        img2:"cachi2.jpg",
+                        img3:"cachi3.jpg",
+                        img4:"cachi4.jpg",
                     }
                    
                 ]
@@ -99,40 +118,5 @@ export const postsList= [
         ]   
         
     },
-    {
-        id:"es",
-        data: "Español",
-        url_pic : "spanish.png",
-        contents:{
-            for_you: "Para tí:",
-            your_favorites: "Tus favoritos:",
-            most_views: "Más vistos",
-            post_para: "Las playas de Miami son famosas por sus arenas bañadas por el sol y aguas azules.",
-            post_button: "Agregar al carrito"
-        }
-    },
-    {
-        id:"fr",
-        data: "Français",
-        url_pic : "french.png",
-        contents:{
-            for_you: "Pour vous:",
-            your_favorites: "Vos favoris:",
-            most_views: "Les vues les plus:",
-            post_para: "Les plages de Miami sont renommées pour leurs sables baignés de soleil et leurs eaux azurées.",
-            post_button: "Ajouter au panier"
-        }
-    },
-    {
-        id:"ru",
-        data: "русский",
-        url_pic : "russian.png",
-        contents:{
-            for_you: "Для вас:",
-            your_favorites: "ваши любимые",
-            most_views: "Самые просмотры:",
-            post_para: "Пляжи Майами известны своими поцелованными солнцем песками и лазурными водами.",
-            post_button: "Добавить в корзину"
-        }
-    }
+   
 ];

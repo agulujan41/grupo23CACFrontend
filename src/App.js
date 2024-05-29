@@ -20,7 +20,8 @@ function App() {
           <Route path='/' element={ <Main/>}/>
           <Route path='/login/' element={ <Authentication type="login"/>}/>
           <Route path='/sign_in/' element={ <Authentication type="sign_in"/>}/>
-          <Route path='/post_details/' element={ <PostDetails/>}/>
+          <Route path='/post_details/:idCategory/:idPost' element={ <PostDetails/>}/>
+          
       </Routes>
      
     </>

@@ -6,7 +6,10 @@ import Navbar from "../../components/Navbar";
 import Footer from "../Footer";
 import "./style.css";
 import {currentSlide, plusSlides, showSlides} from "./post_detail"
+import { useParams } from "react-router-dom";
+import { postsList } from "../../data/postsConstants";
 const PostDetails = () => {
+  const {idCategory,idPost} = useParams()
   const Body = styled.div`
     background-color: ${({ theme }) => theme.backgroundColor};
     width: 90%;
@@ -25,7 +28,7 @@ const PostDetails = () => {
             <div className="mySlides fade">
               <img
                 alt=""
-                src={require("./images/casa1.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img1}`)}
                 style={{ width: "100%" }}
                 className="imagenes"
               />
@@ -34,7 +37,7 @@ const PostDetails = () => {
             <div className="mySlides fade">
               <img
                 alt=""
-                src={require("./images/casa2.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img2}`)}
                 style={{ width: "100%" }}
                 className="imagenes"
               />
@@ -43,7 +46,7 @@ const PostDetails = () => {
             <div className="mySlides fade">
               <img
                 alt=""
-                src={require("./images/casa3.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img3}`)}
                 style={{ width: "100%" }}
                 className="imagenes"
               />
@@ -52,7 +55,7 @@ const PostDetails = () => {
             <div className="mySlides fade">
               <img
                 alt=""
-                src={require("./images/casa4.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img4}`)}
                 style={{ width: "100%" }}
                 className="imagenes"
               />
@@ -71,28 +74,28 @@ const PostDetails = () => {
             <div style={{ textAlign: "center" }} className="thumbs">
               <img
                 alt=""
-                src={require("./images/casa1.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img1}`)}
                 style={{ width: "17%" }}
                 onClick={()=>currentSlide(1)}
                 className="thumbnail"
               />
               <img
                 alt=""
-                src={require("./images/casa2.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img2}`)}
                 style={{ width: "17%" }}
                 onClick={()=>currentSlide(2)}
                 className="thumbnail"
               />
               <img
                 alt=""
-                src={require("./images/casa3.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img3}`)}
                 style={{ width: "17%" }}
                 onClick={()=>currentSlide(3)}
                 className="thumbnail"
               />
               <img
                 alt=""
-                src={require("./images/casa4.jpeg")}
+                src={require(`../../images/post/${postsList[0].contents[idCategory].posts[idPost].img4}`)}
                 style={{ width: "17%" }}
                 onClick={()=>currentSlide(4)}
                 className="thumbnail"
@@ -112,20 +115,17 @@ const PostDetails = () => {
           </div>
           {/*<!-- Form de pago -->*/}
           <div id="Checkout" className="inline">
-            <h1>Miami Beach</h1>
+            <h1>{postsList[0].contents[idCategory].posts[idPost].post_title}</h1>
             <form>
               <p>
-                Short description Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Adipisci culpa deleniti officiis minus
-                recusandae, incidunt ducimus voluptate molestias, corrupti nihil
-                quam et placeat soluta sit nobis provident ullam nesciunt!{" "}
+                {postsList[0].contents[idCategory].posts[idPost].post_para}
               </p>
               <div className="form-group price">
                 <div className="available">
                   <span>Hotel Avaliable</span>
                 </div>
                 <div className="amount-placeholder">
-                  <span>U$D 130.00</span>
+                  <span>U$D {postsList[0].contents[idCategory].posts[idPost].post_price}.00</span>
                 </div>
               </div>
               <div className="card-row">

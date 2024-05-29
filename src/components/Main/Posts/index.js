@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import HomeImg from "../../../images/home.jpg";
 import { useGlobalState } from "../../../App";
 import { languages } from "./constants";
 import { postsList } from "../../../data/postsConstants";
@@ -11,17 +10,17 @@ const Post = () => {
     <section>
       {console.log(postsList[0].contents[0].category)}
       <div className="post-div">
-        {postsList[0].contents.map((value, index) => (
+        {postsList[0].contents.map((value, indexI) => (
           
             <>
             <h2 className="post-h2">{value.category}</h2>
             <div className="posts">
-              {value.posts.map((value,index) =>(
+              {value.posts.map((value,indexJ) =>(
                 <>
                   <article className="post">
-                <img className="img-posts" src={require(`../../../images/post/${value.img1}`)}></img>
+                <img className="img-posts"  style={{cursor:'pointer'}} onClick={()=>window.location.href=`/post_details/${indexI}/${indexJ}`} src={require(`../../../images/post/${value.img1}`)}></img>
                 <div className="post-title">
-                  <h3 className="post-h3">{value.post_title}</h3>
+                  <h3 className="post-h3" style={{cursor:'pointer'}} onClick={()=>window.location.href=`/post_details/${indexI}/${indexJ}`}>{value.post_title}</h3>
                   <div>
                     <div className="post-stars">
                       <svg
