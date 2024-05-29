@@ -94,7 +94,7 @@ const Home = () => {
     background-color: ${({ theme }) => theme.backgroundColor};
     border-radius: 30px;
     width:100%;
-    padding:10px 0px 10px 0px;
+    
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -111,17 +111,22 @@ const Home = () => {
     display:flex;
     flex-dirextion:row;
     justify-content:space-around;
-    padding:10px;
+   
     gap:10px;
   `;
   const Question = styled.div`
+    position:relative;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
     height:min-content;
-    padding-left:8px;
-    padding-right:8px;
+    margin:0px;
     margin:auto;
+    padding:20px 15px 20px 15px;
+    border-radius: 30px;
+    &:hover{
+      background-color:${({theme})=>theme.secondaryColor};
+    }
   `;
   const QuestionTitle = styled.span`
     font-size:0.8em;
@@ -140,7 +145,8 @@ const Home = () => {
     margin:auto;
     height:45px;
     background-color: ${({theme})=>theme.primaryColor};
-    
+    position:absolute;
+    right:0px;
   `;
   const ButtonIconSearch = styled.a`
     border-radius:50%;
@@ -165,18 +171,21 @@ const Home = () => {
                 <Question>
                     <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[0]}</QuestionTitle>
                     <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[0]}</QuestionContent>
+                    < LineaV></LineaV>
                 </Question>
-                < LineaV></LineaV>
+               
                 <Question>
                     <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[1]}</QuestionTitle>
                     <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[1]}</QuestionContent>
+                    < LineaV></LineaV>
                 </Question>
-                < LineaV></LineaV>
+                
                 <Question>
                     <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[2]}</QuestionTitle>
                     <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[2]}</QuestionContent>
+                    < LineaV></LineaV>
                 </Question>
-                < LineaV></LineaV>
+                
                 <Question>
                     <QuestionTitle>{languages[defaultLanguageItem]?.contents.questions_title[3]}</QuestionTitle>
                     <QuestionContent>{languages[defaultLanguageItem]?.contents.questions_content[3]}</QuestionContent>

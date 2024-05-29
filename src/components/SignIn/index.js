@@ -5,9 +5,7 @@ import visibility from "../../images/Icons/visibility.png"
 import visibility_off from "../../images/Icons/visibility_off.png"
 import { useState } from "react";
 const SignIn = () => {
-  const [visibilityPassword,setVisibilityPassword] = useState(false)
-  const [textPassword,setTextPassword] = useState("");
-  const [textCPassword,setTextCPassword] = useState("");
+  const [visibilityPassword,setVisibilityPassword] = useState(false);
   const LoginContainer = styled.div`
     margin: auto;
     height: 80%;
@@ -142,8 +140,7 @@ const SignIn = () => {
            <InputContainer>
             <InputLabel>Password</InputLabel>
             <InputEntry>
-              <input type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········" value={textPassword} onChange={e=>{setTextPassword(e.target.value);e.target.focus();} } autoFocus={true} ></input>
-              
+              <input id="sign_in_input_cpassword" type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········"    ></input>
               <BtnShowPassword src={visibilityPassword?visibility:visibility_off } onClick={()=>{setVisibilityPassword(!visibilityPassword);}}></BtnShowPassword>
             </InputEntry>
           </InputContainer>
@@ -151,7 +148,7 @@ const SignIn = () => {
           <InputContainer>
             <InputLabel>Confirm password</InputLabel>
             <InputEntry>
-              <input type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········" value={textCPassword} onChange={e=>{setTextCPassword(e.target.value);e.target.focus();}} autoFocus={true} ></input>
+              <input id="sign_in_input_cpassword" type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········"  ></input>
               <BtnShowPassword src={visibilityPassword?(visibility):(visibility_off)} onClick={()=>{setVisibilityPassword(!visibilityPassword);}}></BtnShowPassword>
             </InputEntry>
           </InputContainer>
