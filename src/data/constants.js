@@ -4,7 +4,7 @@ export const languages= [
         data: "English",
         url_pic : "english.png",
         contents:{
-            buttonLogin: "Login in",
+            buttonLogin: "Login",
             buttonSignIn: "Sign in",
             
         }
