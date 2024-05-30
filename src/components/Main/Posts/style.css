@@ -21,7 +21,7 @@
 .img-posts {
     width: 20rem;
     height: 20rem;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 1rem;
 }
 .post-title {
