@@ -3,18 +3,18 @@ import styled from 'styled-components';
 
 export const Nav = styled.div`
     background-color: ${({theme}) => theme.backgroundColor};
-    height: 90px;
+    height: 5.625rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 16px;
     position: sticky;
     top: 0;
     z-index: 100;
-    @media (max-width: 960px) {
+    @media (max-width: 60rem) {
         trasition: 0.8s all ease;
     }
-    @media (max-width: 667px), screen and (orientation: landscape) {
+    @media (max-width: 41.6875rem), screen and (orientation: landscape) {
       heigth:20vh;
     }
 `;
@@ -22,34 +22,34 @@ export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 3.75rem;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
-  max-width: 1200px;
+  padding: 0 1.5rem;
+  max-width: 75rem;
 `;
 
 export const NavLogo = styled(LinkR)`
     width: 80%;    
-    padding: 0 6px;
+    padding: 0 .375rem;
     display: flex;
     justify-content: start;
     align-items: center;
     text-decoration: none;
-    @media (max-width: 640px) {
-      padding: 0 0px;
+    @media (max-width: 40rem) {
+      padding: 0 0rem;
   }
 `;
 export const Span = styled.div`
-    padding: 0 4px;
+    padding: 0 .25rem;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: ${({theme})=>theme.primaryColor}
 `;
 
 export const Img = styled.img`
-    height:50px;
-    width : 50px;
+    height:3.125rem;
+    width : 3.125rem;
     
 `;
 export const NavItems = styled.ul`
@@ -57,11 +57,11 @@ export const NavItems = styled.ul`
     display: flex;
     align-items: center;
     justify-content:center;
-    gap: 32px;
-    padding: 0 6px;
+    gap: 2rem;
+    padding: 0 .375rem;
     list-style: none;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 48rem) {
       display: none;
     }
 `;
@@ -77,7 +77,7 @@ export const NavLink = styled.a`
     }
 
     &.active {
-      border-bottom: 2px solid ${({ theme }) => theme.primaryColor};
+      border-bottom: .125rem solid ${({ theme }) => theme.primaryColor};
     }
 `;
 
@@ -90,8 +90,8 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 0 6px;
-  @media screen and (max-width: 768px) {
+  padding: 0 .375rem;
+  @media screen and (max-width: 48rem) {
     display: none;
   }
 `;
@@ -99,13 +99,13 @@ export const ButtonContainer = styled.div`
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     display: flex;
-    height:100px;
+    height:6.25rem;
     align-items:center;
     justify-content:right;
     backgorund-color:yellow;
-    font-size: 1.5rem;
+    font-size: 24px;
     cursor: pointer;
     color: ${({ theme }) => theme.primaryColor};
     -webkit-tap-highlight-color: transparent;
@@ -116,15 +116,15 @@ export const MobileMenu = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 16px;
+    gap: 1rem;
     position: absolute;
-    top: 90px;
-    right: 0px;
+    top: 5.625rem;
+    right: 0rem;
     width:100%;
     background: ${({ theme }) => theme.backgroundColor};
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 .625rem 0 rgba(0, 0, 0, 0.2);
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
 
@@ -135,7 +135,7 @@ export const MobileMenuItems = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 42px;
+  gap: 2.625rem;
   list-style: none;
   width: 100%;
   height: 100%;
@@ -152,24 +152,24 @@ export const MobileMenuLink = styled(LinkR)`
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primaryColor};
+    border-bottom: .125rem solid ${({ theme }) => theme.primaryColor};
   }
 `;
 
 export const MobileMenuButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.primaryColor};
+  border: .1125rem solid ${({ theme }) => theme.primaryColor};
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   
   color: ${({ theme }) => theme.primaryColor};
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   font-weight: 500;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   transition: all 0.6s ease-in-out;
 
   :hover {
@@ -183,7 +183,7 @@ export  const MobileLink = styled.a`
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin: 15px;
+  margin: .9375rem;
 
   text-decoration: none;
   :hover {
@@ -191,27 +191,27 @@ export  const MobileLink = styled.a`
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primaryColor};
+    border-bottom: .125rem solid ${({ theme }) => theme.primaryColor};
   }
 `;
 
 export const MobileNavLogo = styled(LinkR)`
   width: 80%;
-  padding: 0 6px;
+  padding: 0 .375rem;
   display: flex;
   justify-content: start;
   align-items: center;
   text-decoration: none;
-  @media (max-width: 640px) {
-    padding: 0 0px;
+  @media (max-width: 40rem) {
+    padding: 0 0rem;
   }
 `;
 export const NavBarRightComponents = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    gap:50px;
-    @media screen and (max-width: 768px) {
+    gap:3.125rem;
+    @media screen and (max-width: 48rem) {
       display: none;
     }
 `;
@@ -221,13 +221,10 @@ export const NavbarRightButton = styled.a`
   font-weight:500;
   width:fit-content;
   cursor:pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0rem .375rem .75rem -0.125rem, rgba(0, 0, 0, 0.3) 0rem .1875rem .4375rem -0.1875rem;
   white-space: nowrap;
-  padding: 15px 20px 15px 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  padding: .75rem 1.50rem;
+  border-radius: 3.125rem;
   text-decoration:none;
   
 `;
@@ -238,9 +235,7 @@ export const SelectLanguage = styled.div`
     position:relative;
     align-items:left;
     justify-content:center;
-    padding:5px;
     background-color:${({theme})=> theme.backgroundColor};
-
 `;
 export const SelectLanguageMobile = styled.div`
     display:flex;
@@ -248,29 +243,26 @@ export const SelectLanguageMobile = styled.div`
     position:relative;
     align-items:left;
     justify-content:center;
-    margin:15px;
+    margin:.9375rem;
     background-color:${({theme})=> theme.backgroundColor};
 
 `;
 export const CurrentLanguageItem = styled.div`
   display:flex;
   flex-direction:row;
-  gap:10px;
+  gap:.625rem;
   width:100%;
-  padding:2px;
-  &:hover{
-    border:1px solid gray;
-  }
+  padding:.125rem;
 `;
 export const LanguageIcon = styled.img`
-    height:20px;
-    width:20px;
+    height:1.25rem;
+    width:1.25rem;
 `;
 export const LanguageComboBox = styled.div`
     display:flex;
     flex-direction:column;
     position:absolute;
-    bottom:-137px;
+    bottom:-8.5625rem;
     left:50%;
     width:100%;
     transform: translateX(-50%);
@@ -282,18 +274,18 @@ export const LanguageText = styled.span`
    
 `;
 export const LanguageComboBoxIcon = styled.img`
-    height:20px;
-    width:20px;
+    height:1.25rem;
+    width:1.25rem;
 `;
 export const ItemLanguage = styled.div`
     display:flex;
     flex-direction:row;
-    padding:7px;
+    padding:.4375rem;
     background-color:${({theme})=>theme.backgroundColor};
     width:100%;
-    gap:10px;
+    gap:.625rem;
     &:hover{
-      border:1px solid gray;
+      border:.0625rem solid gray;
       cursor:pointer;
       background-color:${({theme})=>theme.buttonSecondaryColor};
     }

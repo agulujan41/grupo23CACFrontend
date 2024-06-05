@@ -18,7 +18,7 @@ const Search = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: .9375rem;
   `;
 
   const ButtonSearch = styled.a`
@@ -26,16 +26,16 @@ const Search = () => {
     text-size: 1.3em;
     background-color: ${({ theme }) => theme.buttonPrimaryColor};
     color: ${({ theme }) => theme.backgroundColor};
-    padding: 10px 23px 10px 23px;
-    border-radius: 23px;
+    padding: 1rem 3rem;
+    border-radius: 3.5rem;
     cursor: pointer;
   `;
   const ContainerSearchComponent = styled.div`
     background-color: ${({ theme }) => theme.backgroundColor};
-    border-radius: 30px;
+    border-radius: 3.5rem;
     width: 100%;
-
-    @media screen and (max-width: 768px) {
+    padding: .5rem;
+    @media screen and (max-width: 48rem) {
       display: none;
     }
   `;
@@ -47,10 +47,10 @@ const Search = () => {
   `;
   const QuestionsContainer = styled.div`
     display: flex;
-    flex-dirextion: row;
+    flex-direction: row;
     justify-content: space-around;
-
-    gap: 10px;
+    padding: 0 1rem;
+    gap: .625rem;
   `;
   const Question = styled.div`
     position: relative;
@@ -58,10 +58,10 @@ const Search = () => {
     flex-direction: column;
     justify-content: space-around;
     height: min-content;
-    margin: 0px;
+    margin: 0rem;
     margin: auto;
-    padding: 20px 15px 20px 15px;
-    border-radius: 30px;
+    padding: 1rem;
+    border-radius: 2rem;
     cursor: pointer;
     &:hover {
       background-color: ${({ theme }) => theme.secondaryColor};
@@ -80,16 +80,15 @@ const Search = () => {
     text-wrap: nowrap;
   `;
   const LineaV = styled.div`
-    width: 1px;
+    width: .0625rem;
     margin: auto;
-    height: 45px;
+    height: 2.8125rem;
     background-color: ${({ theme }) => theme.primaryColor};
     position: absolute;
-    right: 0px;
+    right: 0rem;
   `;
   const ButtonIconSearch = styled.a`
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 2rem;
     cursor: pointer;
     margin: auto;
     display: flex;
@@ -98,14 +97,14 @@ const Search = () => {
     align-items: center;
     background-color: ${({ theme }) => theme.buttonSecondaryColor};
     color: ${({ theme }) => theme.buttonPrimaryColor};
-    margin-right: 10px;
+    margin-right: .625rem;
   `;
   const InputContainerDesplegable = styled.div`
     width:100%;
     position:absolute;
     height:60vh;
     background-color: ${({ theme }) => theme.backgroundColor};
-    border-radius:10px;
+    border-radius: 1rem;
     bottom:-62vh;
     z-index:350;
   `;
@@ -197,7 +196,7 @@ const Search = () => {
               <img
                 src={logoBusqueda}
                 alt=""
-                style={{ height: "50px", width: "50px" }}
+                style={{ height: "3.125rem", width: "3.125rem" }}
               />
             </ButtonIconSearch>
           </TopSearchViewContainer>

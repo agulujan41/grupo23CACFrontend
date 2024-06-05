@@ -17,21 +17,21 @@ const Home = () => {
   `;
   const Img = styled.img`
     position: absolute;
-    top: 0px;
+    top: 0rem;
     width: 100%;
     object-fit: cover;
-    @media screen and (max-width: 1320px) {
+    @media screen and (max-width: 82.5rem) {
       height: 100%;
     }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 68.75rem) {
       height: 100%;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 48rem) {
       height: 100%;
     }
   `;
   const SpanTitle = styled.span`
-    width: 500px;
+    width: 50rem;
     margin: auto;
     text-align: center;
     position: absolute;
@@ -40,28 +40,27 @@ const Home = () => {
     top: 5%;
     font-weight: 550;
     z-index: 20;
-    font-size: 2.5em;
-
+    font-size: 3.5em;
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
     -ms-transition: all 2s ease;
     transition: all 2s ease;
     animation: linear 1s appear_left_to_right;
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 68.75rem) {
       top: 4%;
-      font-size: 2em;
-      width: 300px;
+      font-size: 3em;
+      width: 30rem;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 48rem) {
       top: 3.5%;
-      font-size: 1.85em;
-      width: 270px;
+      font-size: 2.5em;
+      width: 25rem;
     }
-    @media screen and (max-height: 450px) {
+    @media screen and (max-height: 28.125rem) {
       top: 1.5%;
-      font-size: 1.1em;
-      width: 200px;
+      font-size: .2em;
+      width: 10rem;
     }
 
     color: ${({ theme }) => theme.backgroundColor} !important;

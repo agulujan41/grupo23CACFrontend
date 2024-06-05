@@ -18,7 +18,7 @@ const ImgInfo = styled.img`
   object-fit:contain;
   cursor:pointer;
   animation: 2s linear 1s appear_zoom;
-  border-radius:10px;
+  border-radius: 1rem;
   @media only screen and (max-width:967px){
     width:90%;
     
