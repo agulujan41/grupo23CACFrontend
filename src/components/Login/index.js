@@ -4,8 +4,10 @@ import visibility from "../../images/Icons/visibility.png"
 import visibility_off from "../../images/Icons/visibility_off.png"
 import { useState } from "react";import React from "react";
 import googleIcon from "../../images/Icons/google.png"
+import { useForm } from "react-hook-form";
 const Login = () => {
   const [visibilityPassword,setVisibilityPassword] = useState(false);
+
   const LoginContainer = styled.div`
     margin: auto;
     height: 80%;
@@ -166,10 +168,10 @@ const ToolsContainer = styled.div`
   const BtnSIWGoogleSpan= styled.span`
     
   `;
-
+  const { register, handleSubmit, errors } = useForm()
   return (
     <LoginContainer>
-    <FormLogin method="post" action="/sign_in/">
+    <FormLogin method="post" action="/login/" id="formLogin">
       <Title>Login</Title>
       <InputContainers>
         
@@ -177,14 +179,14 @@ const ToolsContainer = styled.div`
         <InputContainer>
           <InputLabel>Email</InputLabel>
           <InputEntry>
-            <input type="text" className="inputLogin" placeholder="youremail@gmail.com"></input>
+            <input type="text" className="inputLogin" placeholder="youremail@gmail.com" ref={register("email",{required:true})}></input>
           </InputEntry>
         </InputContainer>
          {/* Password */}
          <InputContainer>
           <InputLabel>Password</InputLabel>
           <InputEntry>
-            <input id="sign_in_input_cpassword" type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········"    ></input>
+            <input id="sign_in_input_cpassword" type={visibilityPassword?"text":"password" } className="inputLogin" placeholder="··········"    required ></input>
             <BtnShowPassword src={visibilityPassword?visibility:visibility_off } onClick={()=>{setVisibilityPassword(!visibilityPassword);}}></BtnShowPassword>
           </InputEntry>
         </InputContainer>
@@ -198,7 +200,12 @@ const ToolsContainer = styled.div`
         <LoginLinkAccount href="/login/">Forgot your password?</LoginLinkAccount>
       </ToolsContainer>
      
-      <BtnCreateAccount type="submit">Login</BtnCreateAccount>
+      <BtnCreateAccount onClick={()=>{
+        document.forms["formLogin"].submit();
+    
+        
+
+      }}>Login</BtnCreateAccount>
       <OrDelimiter>
         <HLine></HLine>
         <OSpan>Or</OSpan>

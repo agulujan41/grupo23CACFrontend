@@ -118,7 +118,7 @@ const PostDetails = () => {
             <h1>{postsList[0].contents[idCategory].posts[idPost].post_title}</h1>
             <form>
               <p>
-                {postsList[0].contents[idCategory].posts[idPost].post_para}
+                {postsList[0].contents[idCategory].posts[idPost].post_para.substring(0,235)}
               </p>
               <div className="form-group price">
                 <div className="available">

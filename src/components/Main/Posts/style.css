@@ -1,6 +1,6 @@
 .post-div {
     align-items: center;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 .post-h2 {
@@ -20,9 +20,9 @@
 }
 .img-posts {
     width: 20rem;
-    height: 15rem;
+    height: 20rem;
     object-fit: cover;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 .post-title {
     display: flex;
