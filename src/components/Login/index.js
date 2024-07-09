@@ -171,7 +171,7 @@ const ToolsContainer = styled.div`
   const { register, handleSubmit, errors } = useForm()
   return (
     <LoginContainer>
-    <FormLogin method="post" action="/login/" id="formLogin">
+    <FormLogin method="post" action="/login/" id="formLogin"> 
       <Title>Login</Title>
       <InputContainers>
         
